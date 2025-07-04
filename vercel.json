@@ -1,0 +1,55 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "auth/signup-api/signup.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "auth/login-api/login.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "account/profile-api/profile.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "account/account-api/account.js",
+            "use": "@vercel/node"
+        },
+        {
+            "src": "error/404/404.html",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/v1/auth/signup",
+            "dest": "auth/signup-api/signup.js"
+        },
+        {
+            "src": "/v1/auth/login",
+            "dest": "auth/login-api/login.js"
+        },
+        {
+            "src": "/v1/account/profile",
+            "dest": "account/profile-api/profile.js"
+        },
+        {
+            "src": "/v1/account",
+            "dest": "account/account-api/account.js"
+        },
+        {
+            "src": "/v1/account/update",
+            "dest": "account/account-api/account.js"
+        },
+        {
+            "src": "/v1/account/delete",
+            "dest": "account/account-api/account.js"
+        },
+        {
+            "src": "/.*",
+            "dest": "/error/404/404.html"
+        }
+    ]
+}

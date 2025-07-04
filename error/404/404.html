@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - API Not Found</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 6rem;
+      margin: 0;
+      color: #f43f5e;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      color: #94a3b8;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #ffffff;
+      background-color: #3b82f6;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #2563eb;
+    }
+
+    .error-code {
+      font-size: 8rem;
+      font-weight: bold;
+      color: #f43f5e;
+    }
+
+    .animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+      animation: pulse 3s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="animation"></div>
+  <div class="container">
+    <div class="error-code">404</div>
+    <h1>API Not Found</h1>
+    <p>Oops! The API endpoint you are looking for does not exist.</p>
+    <a href="https://proxiaforge.com/">Go Back to Home</a>
+  </div>
+</body>
+</html>
